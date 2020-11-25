@@ -3,6 +3,7 @@ CREDITS:
 Design: Luan
 Developer: Luan
 
+Choosing Design: Static ["staticinmyattic#4446"], Elerocks ["rocks#7935"]
 Choosing fonts: Red ["Red#2871"], Kiwi ["kiwiAAAAAA#6775"]
 
 Honorable Mention:

@@ -1,0 +1,8 @@
+Add the main javascript []
+    - Adding / Reducing the time with the buttons []
+    - The actual countdown system []
+    - Make a sound or any indicator that the timer is done []
+
+Make the page responsive []
+Create the credits section []
+Make a dark theme for them insomniacs []
