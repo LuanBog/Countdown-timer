@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Countdown</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Countdown</h1>
+    <header>
+        <h1>Countdown</h1>
+        <nav>
+            <ul>
+                <li><a href="#">credits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="countdown-parent">
+        <div class="change-value-btns top">
+            <button id="add-value-hours">Up</button>
+            <button id="add-value-minutes">Up</button>
+            <button id="add-value-seconds">Up</button>
+        </div>
+        <span id="countdown-timer">00:00:00</span>
+        <div class="change-value-btns top">
+            <button id="subtract-value-hours">Diwn</button>
+            <button id="subtract-value-minutes">Down</button>
+            <button id="subtract-value-seconds">Down</button>
+        </div>
+
+        <button id="start-btn">Start</button>
+    </div>
+
+    <a href="https://github.com/TheLittleBro122/Countdown-timer" target="_blank">
+        <img src="./images/github-logo.png" alt="github" width="50" />
+    </a>
 </body>
 </html>
