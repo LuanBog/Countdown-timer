@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    background-color: #EAEAEA;
+    min-height: 100%;
+}
+
+.container {
+    text-align: center;
+}
+.container button {
+    margin: 0 auto;
+}
+
+#title {
+    text-align: center;
+    padding: 10px;
+    background-color: #707070;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    position: absolute;
+    list-style: none;
+    right: 20%;
+    top: 20px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #0CCAFF;
+}
+
+a:hover{
+    color: #CCCCFF;
+    text-decoration: underline;
+}
+
+#countdown-parent {
+    margin: 10em;
+}
+
+#countdown-timer {
+    display: block;
+    font-size: 50px;
+}
+
+.change-value-btns {
+    display: inline;
+}
+
+#start-btn {
+    display: block;
+    background-color: #4CFF00;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#start-btn:hover {
+    background-color: #36B500;
+    cursor: pointer;
+}
+
+.change-value-btns button {
+    background: transparent;
+    border: none;
+    outline: none;
+
+}
+
+.change-value-btns button:hover {
+    cursor: pointer;
+    background-color: #828282;
+}
+
+.change-value-btns button:active {
+    background-color: #444;
+}
+
+#github-btn {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}
