@@ -3,7 +3,7 @@ Change the icon at the tab []
 Add the main javascript []
     - The actual countdown system [/]
     - Displaying the time on the client's web browser [/]
-    - Adding / Reducing the time with the buttons []
+    - Adding / Reducing the time with the buttons [/]
     - Starting the time []
     - Make a sound or any indicator that the timer is done []
 
