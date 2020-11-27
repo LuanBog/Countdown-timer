@@ -8,10 +8,15 @@ const addValueSeconds = document.querySelector("#add-value-seconds");
 const subtractValueHours = document.querySelector("#subtract-value-hours");
 const subtractValueMinutes = document.querySelector("#subtract-value-minutes");
 const subtractValueSeconds = document.querySelector("#subtract-value-seconds");
+//Start button
+const startBtn = document.querySelector("#start-btn");
+
+const btns = [addValueHours, addValueMinutes, addValueSeconds, subtractValueHours, subtractValueMinutes, subtractValueSeconds, startBtn];
 
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
+let timing = false;
 
 //This makes the time pleasing to read
 const beautify = (hours_, minutes_, seconds_) => {
@@ -23,37 +28,31 @@ const beautify = (hours_, minutes_, seconds_) => {
 }
 
 const updateTime = () => {
-    let timer = beautify(hours, minutes, seconds);
-
+    const timer = beautify(hours, minutes, seconds);
     countdownTimer.innerHTML = timer;
 }
 
-//Main countdown function
-const countdown = () => {
-    updateTime();
+//Function that gets called everytime the timer is done
+const timerOver = () => {
+    console.log("done");
+    showButtons();
+}
 
-    if(hours === 0 && minutes === 0 && seconds === 0) {
-        //This stops the timer everytime it's over
-        setTimeout(() => {
-            console.log("over!");
-        }, 1000);
+//Hides all buttons
+const hideButtons = () => {
+    btns.forEach(btn => {
+        btn.style.display = "none";
+    });
+}
 
-        clearInterval(countdown);
-    } else {
-        //This is the main countdown
-        if(seconds > 0) {
-            seconds--;
-        } else {
-            if(minutes > 0) {
-                seconds = 59;
-                minutes--;  
-            } else {
-                seconds = 59;
-                minutes = 59;
-                hours--;
-            }
-        }
-    }
+//Shows all buttons
+const showButtons = () => {
+    btns.forEach(btn => {
+        if(btn === startBtn)
+            btn.style.display = "block";
+        else
+            btn.style.display = "inline";    
+    });  
 }
 
 //Add & Subtract buttons
@@ -95,3 +94,42 @@ subtractValueHours.addEventListener("click", () => {
     }
 });
 
+//Start btn
+startBtn.addEventListener("click", () => {
+    if(hours === 0 && minutes === 0 && seconds === 0) return;
+
+    if(!timing) {
+        console.log("started");
+        hideButtons();
+        timing = true;
+
+        //Main countdown function
+        const countdown = setInterval(() => {
+            updateTime();
+
+            if(hours === 0 && minutes === 0 && seconds === 0) {
+                //This stops the timer everytime it's over
+                setTimeout(() => {
+                    timerOver();
+                }, 1000);
+
+                timing = false;
+                clearInterval(countdown);
+            } else {
+                //This is the main countdown
+                if(seconds > 0) {
+                    seconds--;
+                } else {
+                    if(minutes > 0) {
+                        seconds = 59;
+                        minutes--;  
+                    } else {
+                        seconds = 59;
+                        minutes = 59;
+                        hours--;
+                    }
+                }
+            }
+        }, 1000);
+    }
+});
