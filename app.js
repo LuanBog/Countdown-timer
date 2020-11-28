@@ -62,6 +62,12 @@ const showButtons = () => {
     });  
 }
 
+const changeColorByTime = () => {
+    if((hours === 0 && minutes === 0) && seconds <= 3) {
+        countdownTimer.style.color = "#c1090c";
+    }
+}
+
 //Add & Subtract buttons
 addValueSeconds.addEventListener("click", () => {
     if(seconds < 59) {
@@ -110,9 +116,12 @@ startBtn.addEventListener("click", () => {
         hideButtons();
         timing = true;
 
+        countdownTimer.style.color = "#11cc08";
+
         //Main countdown function
         const countdown = setInterval(() => {
             updateTime();
+            changeColorByTime();
 
             if(hours === 0 && minutes === 0 && seconds === 0) {
                 //This stops the timer everytime it's over
@@ -145,4 +154,5 @@ stopBtn.addEventListener("click", () => {
     showButtons();
     stopBtn.style.display = "none";
     alarmSound.pause();
+    countdownTimer.style.color = "#000";
 });

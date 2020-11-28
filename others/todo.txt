@@ -8,7 +8,11 @@ Add the main javascript []
     - Make a sound or any indicator that the timer is done [/]
     - Stop the sound when a button is pressed [/]
 
-Make the timer change color depending on the time []
+Make the timer change color depending on the time [/]
+Make github button stay at the bottom []
 Make the page responsive []
+
+[CRUCIAL] Refactor the javascript []
+
 Create the credits section []
 Make a dark theme for them insomniacs []
