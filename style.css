@@ -59,7 +59,7 @@ a:hover{
     display: inline;
 }
 
-#start-btn {
+.important-btn {
     display: block;
     background-color: #4CFF00;
     border: none;
@@ -70,9 +70,16 @@ a:hover{
     font-size: 20px;
     border-radius: 5px;
 }
-
-#start-btn:hover {
+.important-btn:hover {
     background-color: #36B500;
+    cursor: pointer;
+}
+.stop-btn {
+    background-color: #ed0920;
+    display: none;
+}
+.stop-btn:hover {
+    background-color: #930412;
     cursor: pointer;
 }
 

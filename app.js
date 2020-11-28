@@ -9,7 +9,8 @@ const subtractValueHours = document.querySelector("#subtract-value-hours");
 const subtractValueMinutes = document.querySelector("#subtract-value-minutes");
 const subtractValueSeconds = document.querySelector("#subtract-value-seconds");
 //Start button
-const startBtn = document.querySelector("#start-btn");
+const startBtn = document.querySelector(".start-btn");
+const stopBtn = document.querySelector(".stop-btn");
 
 const btns = [addValueHours, addValueMinutes, addValueSeconds, subtractValueHours, subtractValueMinutes, subtractValueSeconds, startBtn];
 
@@ -17,6 +18,11 @@ let seconds = 0;
 let minutes = 0;
 let hours = 0;
 let timing = false;
+
+//Sound
+const alarmSound = new Audio();
+alarmSound.src = "./sounds/woof.mp3";
+alarmSound.loop = true;
 
 //This makes the time pleasing to read
 const beautify = (hours_, minutes_, seconds_) => {
@@ -34,8 +40,9 @@ const updateTime = () => {
 
 //Function that gets called everytime the timer is done
 const timerOver = () => {
-    console.log("done");
-    showButtons();
+    stopBtn.style.display = "block";    
+
+    alarmSound.play()
 }
 
 //Hides all buttons
@@ -132,4 +139,10 @@ startBtn.addEventListener("click", () => {
             }
         }, 1000);
     }
+});
+
+stopBtn.addEventListener("click", () => {
+    showButtons();
+    stopBtn.style.display = "none";
+    alarmSound.pause();
 });
