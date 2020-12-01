@@ -10,3 +10,30 @@ Honorable Mention:
 
 - Roblox Events
 - Indie - for being the best girlfriend
+
+Format:
+
+{
+  "Designer": "Luan",
+  "Developer": "Luan",
+  "Choosing Design": [
+    {
+      "User": "Static",
+      "Discord": "staticinmyattic#4446"
+    },
+    {
+      "User": "Elerocks",
+      "Discord": "rocks#7935"
+    }
+  ],
+  "Honorable Mention": [
+    {
+      "User": "Roblox Events",
+      "Reason": "They're cool"
+    },
+    {
+      "User": "Indie",
+      "Reason": "Being the best girlfriend"
+    }
+  ]
+}
