@@ -9,10 +9,14 @@ Add the main javascript []
     - Stop the sound when a button is pressed [/]
 
 Make the timer change color depending on the time [/]
-Make github button stay at the bottom []
-Make the page responsive []
-
-[CRUCIAL] Refactor the javascript []
+Make github button stay at the bottom [/]
+Make the page responsive [/]
 
 Create the credits section []
 Make a dark theme for them insomniacs []
+
+[CRUCIAL] Refactor the javascript []
+
+Add multiple alarm sounds []
+
+Make app mobile friendly (more responsive) []

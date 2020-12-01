@@ -1,0 +1,8 @@
+@media screen and (max-width: 790px) {
+    nav ul {
+        position: absolute;
+        list-style: none;
+        right: 15%;
+        top: 20px;
+    }
+}
