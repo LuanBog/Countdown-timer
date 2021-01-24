@@ -12,7 +12,7 @@ Make the timer change color depending on the time [/]
 Make github button stay at the bottom [/]
 Make the page responsive [/]
 
-Create the credits section []
+Create the credits section [/]
 Make a dark theme for them insomniacs []
 
 [CRUCIAL] Refactor the javascript []
